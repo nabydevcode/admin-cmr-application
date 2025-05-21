@@ -1,3 +1,9 @@
+@import "tailwindcss";
+
+.text-xs-custom {
+    font-size: 0.5rem;
+}
+
 body {
-    background-color: skyblue;
+    background-color: white;
 }
