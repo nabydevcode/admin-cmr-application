@@ -20,6 +20,7 @@ final class CompanyController extends AbstractController
         ]);
     }
 
+    /*  formulaire pour le company */
     #[Route('/formulaire', name: 'form_company')]
 
     public function formulaire(Request $request, EntityManagerInterface $em): Response
