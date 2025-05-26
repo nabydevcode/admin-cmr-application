@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\TypeLoading;
 use App\Form\TypeLoadingType;
+use App\Repository\TypeLoadingRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,4 +34,14 @@ final class TypeLoadingController extends AbstractController
 
         return $this->render('type_loading/formulaire.html.twig', ['form' => $form->createView()]);
     }
+
+    #[Route('/type/loading', name: 'app_type_loading', methods: ['GET', 'POST'])]
+    public function fullLoadind(Request $request, TypeLoadingRepository $typeLoadingRepository): Response
+    {
+        $typeLoad = $typeLoadingRepository->findAll();
+
+        return $this->render('type_loading/index.html.twig', ['type_loading' => $typeLoad]);
+
+    }
+
 }

@@ -59,6 +59,15 @@ class Shipment
     #[ORM\Column]
     private ?int $nombrePalette = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $plomb1 = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $tract1 = null;
+
+    #[ORM\Column]
+    private ?int $quantite2 = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -240,6 +249,42 @@ class Shipment
     public function setNombrePalette(int $nombrePalette): static
     {
         $this->nombrePalette = $nombrePalette;
+
+        return $this;
+    }
+
+    public function getPlomb1(): ?string
+    {
+        return $this->plomb1;
+    }
+
+    public function setPlomb1(string $plomb1): static
+    {
+        $this->plomb1 = $plomb1;
+
+        return $this;
+    }
+
+    public function getTract1(): ?string
+    {
+        return $this->tract1;
+    }
+
+    public function setTract1(string $tract1): static
+    {
+        $this->tract1 = $tract1;
+
+        return $this;
+    }
+
+    public function getQuantite2(): ?int
+    {
+        return $this->quantite2;
+    }
+
+    public function setQuantite2(int $quantite2): static
+    {
+        $this->quantite2 = $quantite2;
 
         return $this;
     }

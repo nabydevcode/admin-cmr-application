@@ -77,17 +77,31 @@ class ShipmentType extends AbstractType
                 ],
             ])
             ->add('trailerPlate', TextType::class, [
-                'label' => 'Plaque de la Remorque',
+                'label' => 'Plaque Remorque 1',
+                'attr' => [
+                    'class' => $baseInputClass,
+                    'placeholder' => 'Entrez la plaque de la remorque',
+                ],
+            ])
+            ->add('tract1', TextType::class, [
+                'label' => 'Plaque Remorque 2 ',
                 'attr' => [
                     'class' => $baseInputClass,
                     'placeholder' => 'Entrez la plaque de la remorque',
                 ],
             ])
             ->add('quantity', IntegerType::class, [
-                'label' => 'Quantité',
+                'label' => 'Quantité 1',
                 'attr' => [
                     'class' => $baseInputClass,
-                    'placeholder' => 'Entrez la quantité',
+                    'placeholder' => 'Entrez la quantité 1',
+                ],
+            ])
+            ->add('quantite2', IntegerType::class, [
+                'label' => 'Quantité 2',
+                'attr' => [
+                    'class' => $baseInputClass,
+                    'placeholder' => 'Entrez la quantité 2',
                 ],
             ])
             ->add('nombrePalette', IntegerType::class, [
@@ -107,7 +121,7 @@ class ShipmentType extends AbstractType
                     'class' => $baseSelectClass,
                 ],
             ])
-            ->add('tourNumber', IntegerType::class, [
+            ->add('tourNumber', TextType::class, [
                 'label' => 'Numéro de Tour',
                 'attr' => [
                     'class' => $baseInputClass,
@@ -143,6 +157,13 @@ class ShipmentType extends AbstractType
             ])
             ->add('sealNumber', TextType::class, [
                 'label' => 'Numéro de Scellé',
+                'attr' => [
+                    'class' => $baseInputClass,
+                    'placeholder' => 'Entrez le numéro de scellé 1',
+                ],
+            ])
+            ->add('plomb1', TextType::class, [
+                'label' => 'Numéro de Scellé 2',
                 'attr' => [
                     'class' => $baseInputClass,
                     'placeholder' => 'Entrez le numéro de scellé',

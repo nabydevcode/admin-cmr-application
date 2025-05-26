@@ -26,7 +26,7 @@
 			<div class="relative hidden md:block">
 				<button id="profile-menu" class="flex items-center space-x-2 focus:outline-none">
 					{% if app.user %}
-						<img class="w-10 h-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+						<img class="w-10 h-10 rounded-full" src="{{ asset('images/toure.png') }}" alt="User">
 						<span class="hidden md:inline">
 
 							{{app.user.username}}
